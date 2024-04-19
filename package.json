@@ -1,6 +1,7 @@
 {
   "name": "farmerbackend",
   "version": "1.0.0",
+  "homepage": "https://leonidalmanza.github.io/farmerbackend/",
   "description": "",
   "main": "index.js",
   "scripts": {
