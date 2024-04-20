@@ -1,8 +1,7 @@
-import { Router } from "express";
-
+const { Router } = require('express');
 const router = Router();
 
-const { getUsers, getUserById, createUser, updateUser, deleteUser } = require('../controllers/index.controller');
+const { getUsers, getUserById, createUser, updateUser, deleteUser } = require('../controllers/index.controllers.js');
 
 router.get('/users', getUsers);
 router.get('/users/:id', getUserById);
