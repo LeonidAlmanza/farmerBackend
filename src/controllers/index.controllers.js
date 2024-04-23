@@ -3,19 +3,19 @@ const { Pool } = require('pg');
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    password: '',
-    database: 'firstapi',
+    password: 'Passw0rd!!',
+    database: 'capataz',
     port: '5432'
 });
 
 const getUsers = async (req, res) => {
-    const response = await pool.query('SELECT * FROM users ORDER BY id ASC');
+    const response = await pool.query('SELECT * FROM mae_usuarios ORDER BY usrid ASC');
     res.status(200).json(response.rows);
 };
 
 const getUserById = async (req, res) => {
     const id = parseInt(req.params.id);
-    const response = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
+    const response = await pool.query('SELECT * FROM mae_usuarios WHERE usrid = $1', [id]);
     res.json(response.rows);
 };
 
